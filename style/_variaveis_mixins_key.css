@@ -1,0 +1,9 @@
+@keyframes arrowUpAnimation {
+  0% {
+    top: 70%;
+  }
+  100% {
+    top: 65%;
+    opacity: 0;
+  }
+}/*# sourceMappingURL=_variaveis_mixins_key.css.map */

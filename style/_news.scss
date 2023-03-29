@@ -1,0 +1,27 @@
+/* configuracao da main (h1 - p) */
+.noticias-e-eventos{
+    width: 100%;
+    height: auto;
+    margin: 10rem auto;
+    border-left: 0.1rem solid rgba(0, 0, 0, 0.246);
+    padding: 1.5rem;
+    box-sizing: border-box;
+    h1{
+        width: 100%;
+        text-align: center;
+        font-family: 'Prosto One', cursive;
+        margin: 2rem 0 5rem 0;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 3rem;
+    }
+    .dvp{
+        padding: 1rem 2rem;
+        p{
+            font-size: 2rem;
+            line-height: 3rem;
+            text-indent: 3rem;
+        }
+    }
+}

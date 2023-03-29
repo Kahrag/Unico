@@ -1,0 +1,25 @@
+
+// configuracao das variaveis
+$colorBoxShadowButtom: 0 0 1rem rgb(84, 84, 84);
+$fontFamilyDefault: 'Sevillana', cursive;
+
+
+
+
+
+// configuracao dos Mixins 
+@mixin display($direction, $justy, $align){
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+    justify-content: $justy;
+    align-items: $align;
+}
+
+
+// configuracao dos Keyframes
+
+@keyframes arrowUpAnimation {
+    0%{top: 70%;}
+    100%{top: 65%; opacity: 0;}
+}

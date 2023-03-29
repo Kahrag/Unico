@@ -1,0 +1,113 @@
+
+.contact{
+    @include display(row, space-evenly, center);
+    width: 100%;
+    height: 60rem;
+    border-radius: 0.5rem;
+    display: flex;
+    margin-bottom: 3rem;
+
+    .formulario{
+        @include display(column, center, center);
+        width: 70%;
+        height: 100%;
+        .containerTexto{
+            width: 100%;
+            p{
+                font-family: $fontFamilyDefault;
+                font-weight: normal;
+                font-size: 2.5rem;
+            }
+
+        }
+        div{
+            @include display(row, space-evenly, center);
+            width: 100%;
+            height: 20%;
+            input{
+                width: 40%;
+                outline: none;
+                border-bottom: 0.1rem solid black;
+                padding: 1.5rem;
+                font-size: 1.5rem;
+                background-color: transparent;
+                color: black;
+                &::placeholder{
+                    text-align: center;
+                    color: black;
+                }
+            }
+            #conte-nos{
+                width: 40%;
+                outline: none;
+                border-bottom: 0.1rem solid black;
+                background-color: transparent;
+                color: black;
+                font-size: 1.5rem;
+                &::placeholder{
+                    text-align: center;
+                    color: black;
+                }
+            }
+        }
+
+        input[type=submit]{
+            width: 15%;
+            border: none;
+            text-transform: uppercase;
+            color: white;
+            border-radius: 0.5rem;
+            letter-spacing: 0.1rem;
+            background: linear-gradient(to right, rgb(210, 146, 237), rgb(126, 126, 224));
+            cursor: pointer;
+        }
+    }
+
+
+    .containerEndereco{
+        @include display(column, center, center);
+        width: 20%;
+        height: 70%;
+        background-color: gray;
+        .infos{
+            width: 100%;
+            height: 20%;
+            h2{
+                @include display(row, center, center);
+                width: 100%;
+                height: 100%;
+                font-family: 'Times New Roman', Times, serif;
+                color: white;
+                font-size: 2.5rem;
+                letter-spacing: 0.2rem;
+
+            }
+        }
+        .containerInfosEHoras2,.containerInfosEHoras3,.containerInfosEHoras4,.containerInfosEHoras5{
+            @include display(row, center, center);
+            width: 100%;
+            height: 20%;
+            .containerEmail,.containerTelefone,.containerFigEndereco,.containerHorario{
+                @include display(row, center, center);
+                width: 20%;
+                height: 100%;
+                color: white
+            }
+            .containerinfoEmail,.containerInfoTelefone,.containerInfoEndereco,.containerHorarioInfos{
+                @include display(row, center, center);
+                width: 80%;
+                height: 100%;
+                p{
+                    color: white;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: 1.5rem;
+                    a{
+                        color: white;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

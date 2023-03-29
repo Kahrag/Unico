@@ -1,0 +1,81 @@
+// aqui encontra configuracao global index / configuracao dos links menu e botao scroll 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-size: 10px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    font-family: sans-serif;
+
+
+        /* configuracao do botao scroll (Seta inicio) */
+    .btnscroll{
+        animation: arrowUpAnimation 1.5s linear infinite;
+        position: fixed;
+        right: 3rem;
+        top: 70%;
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+    .btnPaused{
+        animation-play-state: paused;
+    }
+        
+
+        /* configuracao do menu (header - divs - h1 - p - nav - a) */
+        .menu{
+            width: 100%;
+            height: auto;
+            .logo{
+                width: 100%;
+                height: auto;
+                text-align: center;
+                h1 strong{
+                    font-family: 'Sevillana', cursive;
+                    font-size: 5rem;
+                    text-align: center;
+                    margin-top: 1rem;
+                }
+                p{
+                    font-family: 'Prosto One', cursive;
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+
+        }
+        
+
+        // configuracao dos links menu
+    .clicaveis{
+        width: 100%;
+        height: 4rem;
+        margin: 3rem 0 1rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+            a{
+            color: black;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+       
+}

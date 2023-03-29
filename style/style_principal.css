@@ -1,0 +1,598 @@
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&family=Sevillana&display=swap");
+@keyframes arrowUpAnimation {
+  0% {
+    top: 70%;
+  }
+  100% {
+    top: 65%;
+    opacity: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  font-size: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  font-family: sans-serif;
+  /* configuracao do botao scroll (Seta inicio) */
+  /* configuracao do menu (header - divs - h1 - p - nav - a) */
+}
+body .btnscroll {
+  animation: arrowUpAnimation 1.5s linear infinite;
+  position: fixed;
+  right: 3rem;
+  top: 70%;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+body .btnPaused {
+  animation-play-state: paused;
+}
+body .menu {
+  width: 100%;
+  height: auto;
+}
+body .menu .logo {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+body .menu .logo h1 strong {
+  font-family: "Sevillana", cursive;
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+body .menu .logo p {
+  font-family: "Prosto One", cursive;
+  font-size: 1.5rem;
+  text-align: center;
+}
+body .clicaveis {
+  width: 100%;
+  height: 4rem;
+  margin: 3rem 0 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body .clicaveis a {
+  color: black;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* configuracao do carrinho e botao */
+.carrinho {
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -30%;
+  transition: all 0.3s linear;
+  background-color: rgb(244, 249, 252);
+  /* configuracao do btn carrinho */
+  /* configuracao do js toggle */
+}
+.carrinho .btnCarrinho {
+  position: relative;
+  top: 10px;
+  right: 40px;
+  cursor: pointer;
+}
+.carrinho .containerTituloCarrinho {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 25px;
+}
+.carrinho .containerTituloCarrinho h3 {
+  text-align: center;
+  font-family: "Sevillana", cursive;
+  font-weight: normal;
+  font-size: 25px;
+  position: relative;
+}
+.carrinho .containerTituloCarrinho h3::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 1px;
+  bottom: 7px;
+  left: 25%;
+  background-color: black;
+  border-radius: 20px;
+}
+.carrinho .containerSkuIninformacoes {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+.carrinho .containerSkuIninformacoes div {
+  width: 25%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+.carrinho .containerSkuIninformacoes .containerButtonRemove {
+  height: auto;
+}
+.carrinho .containerSkuIninformacoes .containerButtonRemove #removeSku {
+  padding: 10px;
+}
+.carrinho .carrinhoToggle {
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: all 0.3s linear;
+}
+
+/* configuracao do main (main - articles - imgs) */
+.container {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.container .containerGaleriaHome {
+  width: 70%;
+  height: 100%;
+  visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.container .containerGaleriaHome .containerH2 {
+  width: 100%;
+  height: auto;
+}
+.container .containerGaleriaHome .containerH2 h2 {
+  text-align: center;
+  font-family: "Sevillana", cursive;
+  font-weight: normal;
+  font-size: 2.5rem;
+}
+.container .containerGaleriaHome .containerH2 h2 a {
+  font-size: 2.5rem;
+  color: black;
+}
+.container .containerGaleriaHome div {
+  width: 30rem;
+  height: 30rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.container .containerGaleriaHome div img {
+  width: 30rem;
+  height: 30rem;
+  border-radius: inherit;
+  transition: all 0.6s;
+}
+.container .containerGaleriaHome div img:hover {
+  opacity: 0.8;
+}
+
+/* configuracao do shop inical */
+#shop {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  margin-top: 5rem;
+}
+#shop h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
+  margin: 2rem 0;
+}
+#shop a {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: black;
+}
+#shop .products {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+}
+#shop .products div {
+  width: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+#shop .products img {
+  width: 25rem;
+  border-radius: inherit;
+  transition: all 0.6s linear;
+}
+#shop .products img:hover {
+  transform: scale(1.1);
+}
+#shop .products h3 {
+  font-size: 1.3rem;
+  letter-spacing: 0.15rem;
+}
+#shop .products h3, #shop .products p {
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1.5rem 0.5rem 1rem 0.5rem;
+}
+
+/* configuracao das informacoes */
+.info {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.info h2 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin: 5rem;
+}
+.info h2 u {
+  font-size: 3rem;
+}
+.info p {
+  text-align: left;
+  text-transform: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.info li {
+  list-style-position: inside;
+  text-indent: 1.5rem;
+  margin: 0.5rem;
+}
+.info .dvbtn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.info .dvbtn .btn {
+  display: inline-block;
+  padding: 1rem 3.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgb(97, 97, 97);
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s;
+  margin-top: 3rem;
+}
+.info .dvbtn .btn:hover {
+  box-shadow: 0 0 1rem black;
+}
+
+/* configuracao do rodape (footer - p - a) */
+.ft {
+  width: 100%;
+  height: 5rem;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.186);
+}
+.ft p, .ft a {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: black;
+}
+.ft .redes {
+  width: 30%;
+  float: right;
+}
+.ft .redes a .fa-facebook, .ft .redes a .fa-instagram {
+  font-size: 2rem;
+  margin: 0 1.5rem;
+  transition: all 0.4s;
+}
+.ft .redes a .fa-facebook:hover, .ft .redes a .fa-instagram:hover {
+  transform: scale(1.1);
+}
+
+/* configuracao da main do shop (main - divs - h2 - p - a) */
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+.container .card1 {
+  width: 25%;
+  height: auto;
+  margin: 3rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  overflow: visible;
+}
+.container .card1 .imgShop {
+  width: 100%;
+  border-radius: inherit;
+  transition: all 0.8s;
+  position: relative;
+}
+.container .card1 .imgShop:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem black;
+}
+.container .card1 h2, .container .card1 p {
+  margin: 1rem 0;
+  position: relative;
+  z-index: 1;
+}
+.container .card1 h2 {
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  font-size: 1.7rem;
+}
+.container .card1 p {
+  font-size: 1.2rem;
+}
+.container #addToCart {
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  box-shadow: 0 0 1rem rgb(84, 84, 84);
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+.container #addToCart:hover {
+  box-shadow: 0 0 1rem black;
+}
+
+/* configuracao da main (h1 - p) */
+.noticias-e-eventos {
+  width: 100%;
+  height: auto;
+  margin: 10rem auto;
+  border-left: 0.1rem solid rgba(0, 0, 0, 0.246);
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+.noticias-e-eventos h1 {
+  width: 100%;
+  text-align: center;
+  font-family: "Prosto One", cursive;
+  margin: 2rem 0 5rem 0;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 3rem;
+}
+.noticias-e-eventos .dvp {
+  padding: 1rem 2rem;
+}
+.noticias-e-eventos .dvp p {
+  font-size: 2rem;
+  line-height: 3rem;
+  text-indent: 3rem;
+}
+
+/* configuracao da main (h1 - p) */
+.aboutUs {
+  width: 100%;
+  height: auto;
+  margin: 9rem auto;
+  border-left: 0.1rem solid rgba(0, 0, 0, 0.246);
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+.aboutUs h1 {
+  width: 100%;
+  text-align: center;
+  font-family: "Prosto One", cursive;
+  margin: 2rem 0 5rem 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 3rem;
+}
+.aboutUs .dvp {
+  padding: 1rem 1rem;
+}
+.aboutUs .dvp p {
+  line-height: 3rem;
+  text-indent: 3rem;
+  font-size: 2rem;
+}
+.aboutUs .dvp h3 {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-size: 3.5rem;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 60rem;
+  border-radius: 0.5rem;
+  display: flex;
+  margin-bottom: 3rem;
+}
+.contact .formulario {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+}
+.contact .formulario .containerTexto {
+  width: 100%;
+}
+.contact .formulario .containerTexto p {
+  font-family: "Sevillana", cursive;
+  font-weight: normal;
+  font-size: 2.5rem;
+}
+.contact .formulario div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+.contact .formulario div input {
+  width: 40%;
+  outline: none;
+  border-bottom: 0.1rem solid black;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: black;
+}
+.contact .formulario div input::-moz-placeholder {
+  text-align: center;
+  color: black;
+}
+.contact .formulario div input::placeholder {
+  text-align: center;
+  color: black;
+}
+.contact .formulario div #conte-nos {
+  width: 40%;
+  outline: none;
+  border-bottom: 0.1rem solid black;
+  background-color: transparent;
+  color: black;
+  font-size: 1.5rem;
+}
+.contact .formulario div #conte-nos::-moz-placeholder {
+  text-align: center;
+  color: black;
+}
+.contact .formulario div #conte-nos::placeholder {
+  text-align: center;
+  color: black;
+}
+.contact .formulario input[type=submit] {
+  width: 15%;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 0.5rem;
+  letter-spacing: 0.1rem;
+  background: linear-gradient(to right, rgb(210, 146, 237), rgb(126, 126, 224));
+  cursor: pointer;
+}
+.contact .containerEndereco {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 70%;
+  background-color: gray;
+}
+.contact .containerEndereco .infos {
+  width: 100%;
+  height: 20%;
+}
+.contact .containerEndereco .infos h2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+}
+.contact .containerEndereco .containerInfosEHoras2, .contact .containerEndereco .containerInfosEHoras3, .contact .containerEndereco .containerInfosEHoras4, .contact .containerEndereco .containerInfosEHoras5 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+.contact .containerEndereco .containerInfosEHoras2 .containerEmail, .contact .containerEndereco .containerInfosEHoras2 .containerTelefone, .contact .containerEndereco .containerInfosEHoras2 .containerFigEndereco, .contact .containerEndereco .containerInfosEHoras2 .containerHorario, .contact .containerEndereco .containerInfosEHoras3 .containerEmail, .contact .containerEndereco .containerInfosEHoras3 .containerTelefone, .contact .containerEndereco .containerInfosEHoras3 .containerFigEndereco, .contact .containerEndereco .containerInfosEHoras3 .containerHorario, .contact .containerEndereco .containerInfosEHoras4 .containerEmail, .contact .containerEndereco .containerInfosEHoras4 .containerTelefone, .contact .containerEndereco .containerInfosEHoras4 .containerFigEndereco, .contact .containerEndereco .containerInfosEHoras4 .containerHorario, .contact .containerEndereco .containerInfosEHoras5 .containerEmail, .contact .containerEndereco .containerInfosEHoras5 .containerTelefone, .contact .containerEndereco .containerInfosEHoras5 .containerFigEndereco, .contact .containerEndereco .containerInfosEHoras5 .containerHorario {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  color: white;
+}
+.contact .containerEndereco .containerInfosEHoras2 .containerinfoEmail, .contact .containerEndereco .containerInfosEHoras2 .containerInfoTelefone, .contact .containerEndereco .containerInfosEHoras2 .containerInfoEndereco, .contact .containerEndereco .containerInfosEHoras2 .containerHorarioInfos, .contact .containerEndereco .containerInfosEHoras3 .containerinfoEmail, .contact .containerEndereco .containerInfosEHoras3 .containerInfoTelefone, .contact .containerEndereco .containerInfosEHoras3 .containerInfoEndereco, .contact .containerEndereco .containerInfosEHoras3 .containerHorarioInfos, .contact .containerEndereco .containerInfosEHoras4 .containerinfoEmail, .contact .containerEndereco .containerInfosEHoras4 .containerInfoTelefone, .contact .containerEndereco .containerInfosEHoras4 .containerInfoEndereco, .contact .containerEndereco .containerInfosEHoras4 .containerHorarioInfos, .contact .containerEndereco .containerInfosEHoras5 .containerinfoEmail, .contact .containerEndereco .containerInfosEHoras5 .containerInfoTelefone, .contact .containerEndereco .containerInfosEHoras5 .containerInfoEndereco, .contact .containerEndereco .containerInfosEHoras5 .containerHorarioInfos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
+.contact .containerEndereco .containerInfosEHoras2 .containerinfoEmail p, .contact .containerEndereco .containerInfosEHoras2 .containerInfoTelefone p, .contact .containerEndereco .containerInfosEHoras2 .containerInfoEndereco p, .contact .containerEndereco .containerInfosEHoras2 .containerHorarioInfos p, .contact .containerEndereco .containerInfosEHoras3 .containerinfoEmail p, .contact .containerEndereco .containerInfosEHoras3 .containerInfoTelefone p, .contact .containerEndereco .containerInfosEHoras3 .containerInfoEndereco p, .contact .containerEndereco .containerInfosEHoras3 .containerHorarioInfos p, .contact .containerEndereco .containerInfosEHoras4 .containerinfoEmail p, .contact .containerEndereco .containerInfosEHoras4 .containerInfoTelefone p, .contact .containerEndereco .containerInfosEHoras4 .containerInfoEndereco p, .contact .containerEndereco .containerInfosEHoras4 .containerHorarioInfos p, .contact .containerEndereco .containerInfosEHoras5 .containerinfoEmail p, .contact .containerEndereco .containerInfosEHoras5 .containerInfoTelefone p, .contact .containerEndereco .containerInfosEHoras5 .containerInfoEndereco p, .contact .containerEndereco .containerInfosEHoras5 .containerHorarioInfos p {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+}
+.contact .containerEndereco .containerInfosEHoras2 .containerinfoEmail p a, .contact .containerEndereco .containerInfosEHoras2 .containerInfoTelefone p a, .contact .containerEndereco .containerInfosEHoras2 .containerInfoEndereco p a, .contact .containerEndereco .containerInfosEHoras2 .containerHorarioInfos p a, .contact .containerEndereco .containerInfosEHoras3 .containerinfoEmail p a, .contact .containerEndereco .containerInfosEHoras3 .containerInfoTelefone p a, .contact .containerEndereco .containerInfosEHoras3 .containerInfoEndereco p a, .contact .containerEndereco .containerInfosEHoras3 .containerHorarioInfos p a, .contact .containerEndereco .containerInfosEHoras4 .containerinfoEmail p a, .contact .containerEndereco .containerInfosEHoras4 .containerInfoTelefone p a, .contact .containerEndereco .containerInfosEHoras4 .containerInfoEndereco p a, .contact .containerEndereco .containerInfosEHoras4 .containerHorarioInfos p a, .contact .containerEndereco .containerInfosEHoras5 .containerinfoEmail p a, .contact .containerEndereco .containerInfosEHoras5 .containerInfoTelefone p a, .contact .containerEndereco .containerInfosEHoras5 .containerInfoEndereco p a, .contact .containerEndereco .containerInfosEHoras5 .containerHorarioInfos p a {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=style_principal.css.map */
